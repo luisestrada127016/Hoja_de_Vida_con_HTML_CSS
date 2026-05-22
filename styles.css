@@ -5,29 +5,34 @@ body {
 }
 
 .title {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr; /* foto a la izquierda, texto a la derecha */
+    align-items: center;
+    gap: 10px;
     background-color: #6823fd;
     color: white;
     border-radius: 5px;
-    padding: 5px;
-    transition: transform 0.5s ease;
+    border: 1px solid #3a0271;
+    padding: 3px;
+    transition: transform 0.3s ease;
 }
-title:hover {
+.title:hover {
     transform: scale(1.02);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 }
 
 img {
     background-color: #814bf4;
     display: block; 
     margin: 20px auto;
-    width: 150px;
+    width: 300px;
     max-width: 35%;
     border-radius: 5px;
     border: 2px solid #36046c;
     box-shadow: 0 2px 5px rgba(0,0,0,0.9);
     background: linear-gradient(135deg, #36046c, #6a1b9a, #9c27b0);
-    padding: 6px;
-    transition: transform 0.5s ease;
+    padding: 3px;
+    transition: transform 0.3s ease;
 }
 img:hover {
     transform: scale(1.05);
@@ -40,7 +45,7 @@ nav {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #36046c;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 nav:hover {
     transform: scale(1.02);
@@ -66,7 +71,7 @@ nav:hover {
     margin: 20px;
     border-radius: 5px;
     box-shadow: 0 5px 8px rgba(0,0,0,0.1);
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 section:hover {
     transform: scale(1.02);
@@ -97,11 +102,18 @@ html {
     }
 
     img {
-        width: 120px; /* imagen más pequeña en móviles */
+        width: 120px;
+        margin: 0 auto; /* imagen más pequeña en móviles */
     }
 
     .section {
         margin: 10px;
         padding: 15px;
     }
+
+    .title {
+        grid-template-columns: 1fr; /* una sola columna en móviles */
+        text-align: center;
+    }
 }
+
