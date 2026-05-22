@@ -6,7 +6,6 @@ body {
 
 .title {
     display: flex;
-    justify-content: center;
     background-color: #6823fd;
     color: white;
     border-radius: 5px;
@@ -19,9 +18,10 @@ title:hover {
 
 img {
     background-color: #814bf4;
-    display: block;
+    display: block; 
     margin: 20px auto;
     width: 150px;
+    max-width: 35%;
     border-radius: 5px;
     border: 2px solid #36046c;
     box-shadow: 0 2px 5px rgba(0,0,0,0.9);
@@ -89,4 +89,20 @@ html {
 
 .section {
     scroll-margin-top: 120px; /* ajusta según la altura del header */
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column; /* menú vertical en móviles */
+        align-items: center;
+    }
+
+    img {
+        width: 120px; /* imagen más pequeña en móviles */
+    }
+
+    .section {
+        margin: 10px;
+        padding: 15px;
+    }
 }
